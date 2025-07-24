@@ -1,9 +1,5 @@
-'use client';
-import Link from 'next/link';
-import Image from "next/image";
 import { Geist, Geist_Mono, Monoton, Monda, Molengo } from "next/font/google";
-import { useState } from 'react';
-import Menu from "./menu";
+import Navbar from "./navbar";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -43,45 +39,14 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
 
-  const [ buttonToggled, toggleMenu ] = useState(false);
-
-  const handleMenuClick = () => {
-    toggleMenu(!buttonToggled);
-  };
-
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} ${monoton.variable} ${monda.variable} ${molengo.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} ${monoton.variable} ${monda.variable} ${molengo.variable} antialiased flex flex-col h-screen`}
       >
-        <div className={"flex justify-between w-full cursor-pointer relative top-[32px] left-[32px]"}>
-          <Link href="/">
-          <div className={"flex justify-center"}>
-            <Image
-              className={"size-10 animate-[spin_10s_linear_infinite]"}
-              src={"/favicon.png"}
-              alt="favicon"
-              width={40}
-              height={40}
-              priority
-            />
-            <div className={"flex items-center font-[family-name:var(--font-monoton)] pl-[18px]"}>
-              DYLAN LOVE FILM
-            </div>
-            </div>
-          </Link>
-          <Image
-            className={`${buttonToggled ? "size-8 cursor-pointer right-[310px]" : "cursor-pointer size-10 right-[62px]"} duration-180 ease-in-out flex absolute top-[4px]`}
-            src={buttonToggled ? "/X.svg" : "/hamburger.svg"}
-            alt="hamburger menu"
-            width={40}
-            height={40}
-            priority
-            onClick={handleMenuClick}
-          />
-        </div>
-        <Menu buttonToggled={buttonToggled} />
-        <div className={buttonToggled ? "flex flex-col w-full h-screen min-h-screen p-8 pb-20 pr-[360px]" : "flex flex-col w-full h-screen min-h-screen p-8 pb-20"}>
+        <Navbar/>
+        {/* <div className={"flex flex-col w-full items-center justify-center"}> */}
+        <div className={"flex w-full h-full"}>
           {children}
         </div>
       </body>
