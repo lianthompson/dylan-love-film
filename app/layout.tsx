@@ -54,21 +54,24 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} ${monoton.variable} ${monda.variable} ${molengo.variable} antialiased`}
       >
-        <div className={"flex justify-between absolute w-full"}>
+        <div className={"flex justify-between w-full cursor-pointer relative top-[32px] left-[32px]"}>
           <Link href="/">
+          <div className={"flex justify-center"}>
             <Image
-              // className={"flex justify-end cursor-pointer size-10 left-[48px] absolute top-[48px]"}
-              className={"flex justify-end cursor-pointer size-10 relative top-[32px] left-[32px]"}
+              className={"size-10 animate-[spin_10s_linear_infinite]"}
               src={"/favicon.png"}
-              alt="hamburger menu"
+              alt="favicon"
               width={40}
               height={40}
               priority
             />
+            <div className={"flex items-center font-[family-name:var(--font-monoton)] pl-[18px]"}>
+              DYLAN LOVE FILM
+            </div>
+            </div>
           </Link>
           <Image
-            // className={`${buttonToggled ? "size-8 cursor-pointer mr-8 right-[270px]" : "flex justify-end cursor-pointer size-10 right-[48px]"} duration-180 ease-in-out flex absolute top-[48px]`}
-            className={`${buttonToggled ? "size-8 cursor-pointer right-[290px]" : "flex justify-end cursor-pointer size-10 right-[32px]"} duration-180 ease-in-out flex relative top-[32px]`}
+            className={`${buttonToggled ? "size-8 cursor-pointer right-[310px]" : "cursor-pointer size-10 right-[62px]"} duration-180 ease-in-out flex absolute top-[4px]`}
             src={buttonToggled ? "/X.svg" : "/hamburger.svg"}
             alt="hamburger menu"
             width={40}

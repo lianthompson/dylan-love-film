@@ -6,12 +6,12 @@ interface MenuProps {
     buttonToggled: boolean
 }
 
-export default function Menu({buttonToggled}: MenuProps) {
+export default function Menu({ buttonToggled }: MenuProps) {
 
     const pathname = usePathname();
 
     return (
-        <div className="font-[family-name:var(--font-monda)] text-3xl flex absolute top-[48px] right-[48px]">
+        <div className="font-[family-name:var(--font-monda)] text-3xl flex absolute top-[32px] right-[32px] absolute">
             <div>
             </div>
             {buttonToggled &&
