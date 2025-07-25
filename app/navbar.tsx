@@ -8,7 +8,7 @@ export default function Navbar() {
     const pathname = usePathname();
 
     return (
-        <div className={"flex flex-row justify-between m-[32px]"}>
+        <div className={"flex flex-row justify-between m-[32px] z-10"}>
             <Link href="/">
                 <div className={"flex justify-center"}>
                     <Image
@@ -25,14 +25,14 @@ export default function Navbar() {
                 </div>
             </Link>
             <div className={"flex flex-row items-center font-[family-name:var(--font-monda)] text-2xl gap-[18px]"}>
-                <div className={`${pathname === "/motion/commercial" && "text-[#6969E4]"}`}>
-                    <Link href="/motion/commercial">Commercial</Link>
+                <div className={`${pathname === "/commercial" && "text-[#6969E4]"}`}>
+                    <Link href="/commercial">Commercial</Link>
                 </div>
-                <div className={`${pathname === "/motion/documentary" && "text-[#6969E4]"}`}>
-                    <Link href="/motion/documentary">Documentary</Link>
+                <div className={`${pathname === "/documentary" && "text-[#6969E4]"}`}>
+                    <Link href="/documentary">Documentary</Link>
                 </div>
-                <div className={`${pathname === "/motion/narrative" && "text-[#6969E4]"}`}>
-                    <Link href="/motion/narrative">Narrative</Link>
+                <div className={`${pathname === "/narrative" && "text-[#6969E4]"}`}>
+                    <Link href="/narrative">Narrative</Link>
                 </div>
                 <div className={`${pathname === "/rentals" && "text-[#6969E4]"}`}>
                     <Link href="/rentals">Rentals</Link>
