@@ -45,7 +45,6 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} ${monoton.variable} ${monda.variable} ${molengo.variable} antialiased flex flex-col h-screen`}
       >
         <Navbar/>
-        {/* <div className={"flex flex-col w-full items-center justify-center"}> */}
         <div className={"flex w-full h-full"}>
           {children}
         </div>
