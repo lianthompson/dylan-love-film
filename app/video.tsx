@@ -11,7 +11,6 @@ export default function Video({src}: VideoProps) {
     // <video width="600" height="540" className="m-[20px] max-w-none" controls preload="none" poster={poster}>
     <video width="640" className="m-[20px] max-w-none" controls preload="none" autoPlay loop muted>
       <source src={src} type="video/mp4" />
-      {/* <source src="dummyVid1.mp4" type="video/mp4" /> */}
       <track
         src={src}
         kind="subtitles"
