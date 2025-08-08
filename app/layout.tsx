@@ -1,4 +1,5 @@
 import { Geist, Geist_Mono, Monoton, Monda, Molengo } from "next/font/google";
+import Image from "next/image";
 import Navbar from "./navbar";
 import "./globals.css";
 
@@ -44,9 +45,14 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} ${monoton.variable} ${monda.variable} ${molengo.variable} antialiased flex flex-col h-screen`}
       >
-        <Navbar/>
+        <Navbar />
         <div className={"flex w-full h-full"}>
           {children}
+        </div>
+        <div className="flex gap-[10px] justify-end mb-[32px] mr-[32px]">
+          <Image src={"/instagram.svg"} alt="instagram" width={40} height={40} />
+          <Image src={"/vimeo.svg"} alt="instagram" width={40} height={40} />
+          <Image src={"/icons8-email-50.png"} alt="instagram" width={40} height={40} />
         </div>
       </body>
     </html>

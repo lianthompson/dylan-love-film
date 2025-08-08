@@ -8,7 +8,8 @@ export default function Navbar() {
     const pathname = usePathname();
 
     return (
-        <div className={"absolute z-10 w-full"}>
+        // <div className={"absolute z-10 w-full"}>
+        <div className={"z-10 w-full"}>
             <div className={"relative flex flex-row justify-between m-[32px] z-10"}>
             <Link href="/">
                 <div className={"flex justify-center cursor-pointer"}>
